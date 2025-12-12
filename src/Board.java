@@ -49,15 +49,15 @@ public class Board {
 
     public boolean isValidStep(int fromX, int fromY, int toX, int toY) {
         return isCheckerBelongToCurrent(fromX, fromY) &&
-                    isSquareEmpty(toX, toY) &&
-                        Math.abs(toX - fromX) == 1 && Math.abs(toY - fromY) == 1;
+                isSquareEmpty(toX, toY) &&
+                Math.abs(toX - fromX) == 1 && Math.abs(toY - fromY) == 1;
     }
 
     public boolean isValidJump(int fromX, int fromY, int toX, int toY) {
         return isCheckerBelongToCurrent(fromX, fromY) &&
-                    isSquareEmpty(toX, toY) &&
-                        Math.abs(toX - fromX) == 2 && Math.abs(toY - fromY) == 2 &&
-                            !isSquareEmpty(Math.abs(toX + fromX) / 2, Math.abs(toY + fromY) / 2);
+                isSquareEmpty(toX, toY) &&
+                Math.abs(toX - fromX) == 2 && Math.abs(toY - fromY) == 2 &&
+                !isSquareEmpty(Math.abs(toX + fromX) / 2, Math.abs(toY + fromY) / 2);
     }
 
     public boolean canMove(int fromX, int fromY, int toX, int toY) {
@@ -86,9 +86,31 @@ public class Board {
             }
 
 
-
         }
     }
+
+    public void checkSquareInfo(int x, int y) {
+
+        if (isSquareEmpty(x, y)) {
+            System.out.println("В клетке (" + x + ";" + y + ") ничего нет");
+        }
+        else {
+            if (getCheckerAt(x, y).color.equals(PlayerColor.WHITE)) {
+                System.out.println("В клетке (" + x + ";" + y + ") есть БЕЛАЯ шашка");
+            } else {
+                System.out.println("В клетке (" + x + ";" + y + ") есть ЧЕРНАЯ шашка");
+            }
+        }
+
+
+    }
+
+
+
+
+
+
+
 
 
 }

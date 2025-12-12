@@ -6,6 +6,10 @@ public class Main {
         Board board = new Board();
         System.out.println("Игра началась. Ходит: "+board.currentPlayer);
 
-        System.out.println(board.isValidJump(0,0,2,2));
+        board.makeMove(6,7,5,6);
+        board.checkSquareInfo(5,6);
+        board.checkSquareInfo(6,7);
+
+
     }
 }
