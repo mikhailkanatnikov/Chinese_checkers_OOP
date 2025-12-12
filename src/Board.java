@@ -25,8 +25,20 @@ public class Board {
         grid[7][7] = new Checker(7, 7, PlayerColor.WHITE);
     }
 
+    public boolean isXYinBoard(int x, int y) {
+        return x >= 0 && x <= 7 && y >= 0 && y <= 7;
+    }
+
     public boolean isSquareEmpty(int x, int y) {
-        return (x >= 0 && x <= 7 && y >= 0 && y <= 7 && grid[x][y] == null);
+        return (isXYinBoard(x, y)) && (grid[x][y] == null);
+    }
+
+    public Checker getCheckerAt(int x, int y) {
+        if (isSquareEmpty(x, y) || !isXYinBoard(x, y)) {
+            return null;
+        } else {
+            return grid[x][y];
+        }
     }
 
 
