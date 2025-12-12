@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="первый комит с проектом">
+    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="public boolean isXYinBoard&#10;&#10;public boolean isSquareEmpty&#10;&#10;public Checker getCheckerAt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +79,20 @@
       <option name="project" value="LOCAL" />
       <updated>1765551151532</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="public boolean isXYinBoard&#10;&#10;public boolean isSquareEmpty&#10;&#10;public Checker getCheckerAt">
+      <option name="closed" value="true" />
+      <created>1765565357692</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765565357692</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="первый комит с проектом" />
-    <option name="LAST_COMMIT_MESSAGE" value="первый комит с проектом" />
+    <MESSAGE value="public boolean isXYinBoard&#10;&#10;public boolean isSquareEmpty&#10;&#10;public Checker getCheckerAt" />
+    <option name="LAST_COMMIT_MESSAGE" value="public boolean isXYinBoard&#10;&#10;public boolean isSquareEmpty&#10;&#10;public Checker getCheckerAt" />
   </component>
 </project>

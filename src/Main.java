@@ -1,3 +1,4 @@
+
 public class Main {
 
     public static void main(String[] args) {
@@ -5,5 +6,6 @@ public class Main {
         Board board = new Board();
         System.out.println("Игра началась. Ходит: "+board.currentPlayer);
 
+        System.out.println(board.isValidJump(0,0,2,2));
     }
 }

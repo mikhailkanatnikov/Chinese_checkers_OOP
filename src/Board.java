@@ -41,5 +41,28 @@ public class Board {
         }
     }
 
+    public boolean isCheckerBelongToCurrent(int x, int y) {
+        Checker checker = getCheckerAt(x, y);
+        return (checker != null) && (checker.color == currentPlayer);
+    }
+
+
+    public boolean isValidStep(int fromX, int fromY, int toX, int toY) {
+        return isCheckerBelongToCurrent(fromX, fromY) &&
+                isSquareEmpty(toX, toY) &&
+                    Math.abs(toX - fromX) == 1 && Math.abs(toY - fromY) == 1;
+            }
+
+    public boolean isValidJump(int fromX, int fromY, int toX, int toY){
+        return isCheckerBelongToCurrent(fromX, fromY) &&
+                isSquareEmpty(toX, toY) &&
+                    Math.abs(toX - fromX) == 2 && Math.abs(toY - fromY) == 2 &&
+                        !isSquareEmpty(Math.abs(toX+fromX)/2,Math.abs(toY+fromY)/2);
+    }
+
+
+
 
 }
+
+
