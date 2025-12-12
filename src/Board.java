@@ -49,18 +49,46 @@ public class Board {
 
     public boolean isValidStep(int fromX, int fromY, int toX, int toY) {
         return isCheckerBelongToCurrent(fromX, fromY) &&
-                isSquareEmpty(toX, toY) &&
-                    Math.abs(toX - fromX) == 1 && Math.abs(toY - fromY) == 1;
-            }
-
-    public boolean isValidJump(int fromX, int fromY, int toX, int toY){
-        return isCheckerBelongToCurrent(fromX, fromY) &&
-                isSquareEmpty(toX, toY) &&
-                    Math.abs(toX - fromX) == 2 && Math.abs(toY - fromY) == 2 &&
-                        !isSquareEmpty(Math.abs(toX+fromX)/2,Math.abs(toY+fromY)/2);
+                    isSquareEmpty(toX, toY) &&
+                        Math.abs(toX - fromX) == 1 && Math.abs(toY - fromY) == 1;
     }
 
+    public boolean isValidJump(int fromX, int fromY, int toX, int toY) {
+        return isCheckerBelongToCurrent(fromX, fromY) &&
+                    isSquareEmpty(toX, toY) &&
+                        Math.abs(toX - fromX) == 2 && Math.abs(toY - fromY) == 2 &&
+                            !isSquareEmpty(Math.abs(toX + fromX) / 2, Math.abs(toY + fromY) / 2);
+    }
 
+    public boolean canMove(int fromX, int fromY, int toX, int toY) {
+        return isValidJump(fromX, fromY, toX, toY) || isValidStep(fromX, fromY, toX, toY);
+
+    }
+
+    public void makeMove(int fromX, int fromY, int toX, int toY) {
+        if (!canMove(fromX, fromY, toX, toY)) {
+            throw new IllegalArgumentException("Недопустимый ход!");
+        } else {
+
+            //перемещение
+            Checker checker = getCheckerAt(fromX, fromY);
+            grid[toX][toY] = checker;
+            grid[fromX][fromY] = null;
+
+            checker.x = toX;
+            checker.y = toY;
+
+            //сменить игрока
+            if (currentPlayer.equals(PlayerColor.WHITE)) {
+                currentPlayer = PlayerColor.BLACK;
+            } else {
+                currentPlayer = PlayerColor.WHITE;
+            }
+
+
+
+        }
+    }
 
 
 }

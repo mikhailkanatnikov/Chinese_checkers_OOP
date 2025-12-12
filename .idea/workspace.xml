@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="public boolean isXYinBoard&#10;&#10;public boolean isSquareEmpty&#10;&#10;public Checker getCheckerAt">
+    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="isValidStep&#10;isCheckerBelongToCurrent&#10;isValidJump">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,12 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1765565357692</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="isValidStep&#10;isCheckerBelongToCurrent&#10;isValidJump">
+      <option name="closed" value="true" />
+      <created>1765568091791</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765568091791</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="первый комит с проектом" />
     <MESSAGE value="public boolean isXYinBoard&#10;&#10;public boolean isSquareEmpty&#10;&#10;public Checker getCheckerAt" />
-    <option name="LAST_COMMIT_MESSAGE" value="public boolean isXYinBoard&#10;&#10;public boolean isSquareEmpty&#10;&#10;public Checker getCheckerAt" />
+    <MESSAGE value="isValidStep&#10;isCheckerBelongToCurrent&#10;isValidJump" />
+    <option name="LAST_COMMIT_MESSAGE" value="isValidStep&#10;isCheckerBelongToCurrent&#10;isValidJump" />
   </component>
 </project>
