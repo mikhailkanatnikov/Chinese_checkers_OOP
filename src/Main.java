@@ -7,8 +7,7 @@ public class Main {
         System.out.println("Игра началась. Ходит: "+board.currentPlayer);
 
         board.makeMove(6,7,5,6);
-        board.checkSquareInfo(5,6);
-        board.checkSquareInfo(6,7);
+
 
 
     }

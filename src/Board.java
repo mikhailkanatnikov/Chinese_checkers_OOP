@@ -78,41 +78,59 @@ public class Board {
             checker.x = toX;
             checker.y = toY;
 
-            //сменить игрока
-            if (currentPlayer.equals(PlayerColor.WHITE)) {
-                currentPlayer = PlayerColor.BLACK;
+            //////////////////////проверка победы//////////////////////////////////
+            if (checkWin(currentPlayer)) {
+                if (currentPlayer == PlayerColor.BLACK) {
+                    System.out.println("Конец игры. Выиграли черные");
+                } else {
+                    System.out.println("Конец игры. Выиграли белые");
+                }
+            }
+
+                //сменить игрока
+                if (currentPlayer.equals(PlayerColor.WHITE)) {
+                    currentPlayer = PlayerColor.BLACK;
+                } else {
+                    currentPlayer = PlayerColor.WHITE;
+                }
+            }
+        }
+
+        public void checkSquareInfo ( int x, int y){
+
+            if (isSquareEmpty(x, y)) {
+                System.out.println("В клетке (" + x + ";" + y + ") ничего нет");
             } else {
-                currentPlayer = PlayerColor.WHITE;
+                if (getCheckerAt(x, y).color.equals(PlayerColor.WHITE)) {
+                    System.out.println("В клетке (" + x + ";" + y + ") есть БЕЛАЯ шашка");
+                } else {
+                    System.out.println("В клетке (" + x + ";" + y + ") есть ЧЕРНАЯ шашка");
+                }
             }
 
 
         }
-    }
 
-    public void checkSquareInfo(int x, int y) {
+        public boolean checkWin (PlayerColor color){
+            int[][] targets;
+            int[][] whiteTarget = {{0, 0}, {1, 0}, {2, 0}, {0, 1}, {1, 1}, {0, 2}};
+            int[][] blackTarget = {{7, 5}, {6, 6}, {7, 6}, {5, 7}, {6, 7}, {7, 7}};
 
-        if (isSquareEmpty(x, y)) {
-            System.out.println("В клетке (" + x + ";" + y + ") ничего нет");
-        }
-        else {
-            if (getCheckerAt(x, y).color.equals(PlayerColor.WHITE)) {
-                System.out.println("В клетке (" + x + ";" + y + ") есть БЕЛАЯ шашка");
+            if (color == PlayerColor.WHITE) {
+                targets = whiteTarget;
             } else {
-                System.out.println("В клетке (" + x + ";" + y + ") есть ЧЕРНАЯ шашка");
+                targets = blackTarget;
             }
+
+            for (int[] cell : targets) {
+                if (grid[cell[0]][cell[1]] == null || grid[cell[0]][cell[1]].color != color) {
+                    return false;
+                }
+            }
+            return true;
         }
 
 
     }
-
-
-
-
-
-
-
-
-
-}
 
 
