@@ -1,3 +1,5 @@
+package logic;
+import drawing.*;
 
 public class Main {
 
