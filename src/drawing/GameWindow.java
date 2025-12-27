@@ -11,11 +11,12 @@ public class GameWindow {
         JFrame frame = new JFrame("Chinese checkers");
         frame.setSize(600,600);
 
-        BoardPanel panel = new BoardPanel();
-
+        Board board = new Board();
+        BoardPanel panel = new BoardPanel(board);
         frame.add(panel);
-
         frame.setVisible(true);
+
+
 
 
 

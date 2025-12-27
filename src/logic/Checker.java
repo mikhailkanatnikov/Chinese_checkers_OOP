@@ -1,5 +1,7 @@
 package logic;
 
+import java.awt.*;
+
 public class Checker {
 
     int x;
@@ -10,6 +12,10 @@ public class Checker {
         this.x = x;
         this.y = y;
         this.color = color;
+    }
+
+    public PlayerColor getCheckerColor(){
+        return color;
     }
 
 }
