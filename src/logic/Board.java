@@ -3,7 +3,7 @@ package logic;
 public class Board {
 
     Checker[][] grid = new Checker[8][8];
-    PlayerColor currentPlayer = PlayerColor.WHITE; //белые начинают
+    public PlayerColor currentPlayer = PlayerColor.WHITE; //белые начинают
 
     public Board() {
         setupCheckers();

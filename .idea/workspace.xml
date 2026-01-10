@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="умеет рисовать доску">
+    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="отрисовка доски и клеток">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawing/BoardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawing/BoardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/drawing/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawing/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766787164634</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="отрисовка доски и клеток">
+      <option name="closed" value="true" />
+      <created>1766824842050</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1766824842050</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,6 +147,7 @@
     <MESSAGE value="вспомогательный метод checkSquareInfo" />
     <MESSAGE value="дописана логика полностью(метод checkWin)" />
     <MESSAGE value="умеет рисовать доску" />
-    <option name="LAST_COMMIT_MESSAGE" value="умеет рисовать доску" />
+    <MESSAGE value="отрисовка доски и клеток" />
+    <option name="LAST_COMMIT_MESSAGE" value="отрисовка доски и клеток" />
   </component>
 </project>
