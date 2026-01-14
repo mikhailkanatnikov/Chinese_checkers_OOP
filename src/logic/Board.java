@@ -1,9 +1,17 @@
 package logic;
 
+import java.util.ArrayList;
+
 public class Board {
 
     Checker[][] grid = new Checker[8][8];
     public PlayerColor currentPlayer = PlayerColor.WHITE; //белые начинают
+
+
+
+
+
+
 
     public Board() {
         setupCheckers();

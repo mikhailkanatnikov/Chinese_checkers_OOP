@@ -3,6 +3,7 @@ package drawing;
 import logic.Board;
 import logic.Checker;
 import logic.PlayerColor;
+import logic.Point;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,19 +11,22 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import static logic.Point.specialPoints;
+
 public class BoardPanel extends JPanel {
 
     public int BOARD_HEIGHT_WIDTH = 400;
-    public int CELL_AMOUNT = 49;
 
     public Board board;
 
     public Integer selectedX = null;
     public Integer selectedY = null;
+    private final JLabel statusLabel;
 
 
     public BoardPanel(Board board) {
         this.board = board;
+        setLayout(new BorderLayout());
 
         //мышь
 
@@ -35,10 +39,10 @@ public class BoardPanel extends JPanel {
                 int x = e.getX();
                 int y = e.getY();
 
-                int clickedBoardX = (x-85)/50;
-                int clickedBoardY = (y-70)/50;
+                int clickedBoardX = (x - 85) / 50;
+                int clickedBoardY = (y - 70) / 50;
 
-                if (clickedBoardX<0 || clickedBoardX>7 || clickedBoardY<0 || clickedBoardY>7  ){
+                if (clickedBoardX < 0 || clickedBoardX > 7 || clickedBoardY < 0 || clickedBoardY > 7) {
                     return;
                 }
 
@@ -54,6 +58,20 @@ public class BoardPanel extends JPanel {
                     // Ход
                     try {
                         board.makeMove(selectedX, selectedY, clickedBoardX, clickedBoardY);
+                        if (board.currentPlayer == PlayerColor.WHITE) {
+                            statusLabel.setText("Ходят белые");
+                        } else {
+                            statusLabel.setText("Ходят чёрные");
+                        }
+
+                        // ПРОВЕРКА ПОБЕДЫ
+                        if (board.checkWin(PlayerColor.WHITE)) {
+                            statusLabel.setText("Белые победили!");
+                        }
+                        if (board.checkWin(PlayerColor.BLACK)) {
+                            statusLabel.setText("Чёрные победили!");
+                        }
+
                         selectedX = null;
                         selectedY = null;
                         repaint();
@@ -65,9 +83,13 @@ public class BoardPanel extends JPanel {
                 }
             }
         });
+
+
+        statusLabel = new JLabel("Ходят белые", SwingConstants.CENTER);
+        add(statusLabel, BorderLayout.SOUTH); // ← добавить эту строку
     }
 
-    
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         drawBoard(g);
@@ -87,34 +109,47 @@ public class BoardPanel extends JPanel {
         for (int i = 0; i <= 7; i += 1) {
             for (int j = 0; j <= 7; j += 1) {
 
+                g2d.drawRect(85 + 50 * i, 70 + 50 * j, 50, 50);
+
+
+
+
                 if ((i + j) % 2 == 0) {
-                    g2d.drawRect(85 + 50 * i, 70 + 50 * j, 50, 50);
 
                     g2d.setColor(new Color(217, 185, 167)); //белые
                     g2d.fillRect(85 + 50 * i, 70 + 50 * j, 50, 50);
                     // После g2d.fillRect(...);
                     if (selectedX != null && i == selectedX && j == selectedY) {
                         g2d.setColor(new Color(255, 255, 0, 100));
-                        g2d.fillRect(85 + 50*i, 70 + 50*j, 50, 50);
+                        g2d.fillRect(85 + 50 * i, 70 + 50 * j, 50, 50);
                     }
 
 
-
-
                 } else {
-                    g2d.drawRect(85 + 50 * i, 70 + 50 * j, 50, 50);
+
                     g2d.setColor(new Color(92, 76, 67)); //коричневые
                     g2d.fillRect(85 + 50 * i, 70 + 50 * j, 50, 50);
                     // После g2d.fillRect(...);
                     if (selectedX != null && i == selectedX && j == selectedY) {
                         g2d.setColor(new Color(255, 255, 0, 100));
-                        g2d.fillRect(85 + 50*i, 70 + 50*j, 50, 50);
+                        g2d.fillRect(85 + 50 * i, 70 + 50 * j, 50, 50);
                     }
                 }
 
-
             }
         }
+
+        //особые клетки
+        for(Point p: specialPoints){
+                g2d.setStroke(new BasicStroke(5));
+                g2d.setColor(Color.BLACK);
+                g2d.drawRect(85 + 50 * p.x, 70 + 50 * p.y, 50, 50);
+
+
+        }
+        g2d.setStroke(new BasicStroke(1));
+
+
 
     }
 
