@@ -22,14 +22,20 @@ public class BoardPanel extends JPanel {
     public Integer selectedX = null;
     public Integer selectedY = null;
     private final JLabel statusLabel;
+    private final JLabel gameName;
 
 
     public BoardPanel(Board board) {
         this.board = board;
         setLayout(new BorderLayout());
+        setBackground(new Color(255, 255, 255));
+
+
+        gameName = new JLabel("Chinese Checkers", SwingConstants.CENTER);
+        gameName.setFont(new Font("Arial",Font.BOLD,25));
+        add(gameName, BorderLayout.NORTH);
 
         //мышь
-
         addMouseListener(new MouseAdapter() {
 
             @Override
@@ -86,7 +92,8 @@ public class BoardPanel extends JPanel {
 
 
         statusLabel = new JLabel("Ходят белые", SwingConstants.CENTER);
-        add(statusLabel, BorderLayout.SOUTH); // ← добавить эту строку
+        statusLabel.setFont(new Font("Arial",Font.BOLD,20));
+        add(statusLabel, BorderLayout.SOUTH);
     }
 
 

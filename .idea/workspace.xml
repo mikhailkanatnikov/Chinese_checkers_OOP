@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="всё двигается и работает">
-      <change afterPath="$PROJECT_DIR$/src/logic/Point.java" afterDir="false" />
+    <list default="true" id="e945ff2a-64c7-4aeb-9ef6-d20ec4b69f15" name="Changes" comment="подсветка особых клеток + класс Point">
+      <change afterPath="$PROJECT_DIR$/src/drawing/startMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawing/BoardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawing/BoardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawing/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawing/GameWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,15 +47,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.GameWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GameWindow.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.startMenu.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -145,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768048937514</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="подсветка особых клеток + класс Point">
+      <option name="closed" value="true" />
+      <created>1768404619792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1768404619793</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,6 +167,7 @@
     <MESSAGE value="умеет рисовать доску" />
     <MESSAGE value="отрисовка доски и клеток" />
     <MESSAGE value="всё двигается и работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="всё двигается и работает" />
+    <MESSAGE value="подсветка особых клеток + класс Point" />
+    <option name="LAST_COMMIT_MESSAGE" value="подсветка особых клеток + класс Point" />
   </component>
 </project>
